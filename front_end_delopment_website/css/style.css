@@ -2,30 +2,62 @@
     margin: 0;
 }
 
+:root {
+    --hoofdKleur: black ;
+    --achtergrondKleur: white ;
+    --accentKleur: black ;
+}
+
+@media (prefers-color-scheme:dark) {
+    :root {
+    --hoofdKleur: #ffff00 ;
+    --accentKleur: black;
+    --achtergrondKleur: #ff00ff ;
+    }
+}
+
+h1, h2, h3, h5, li {
+    color: var(--hoofdKleur)
+}
+
+
+
 /*********************/
-/*     header        */
+/*     FONTS         */
 /*********************/
 
 
+@font-face {
+    font-family: 'koptekst' ;
+    src: url(../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
 
+
+
+/*********************/
+/*     HEADER        */
+/*********************/
+
+/*********************/
+/***     NAV       ***/
+/*********************/
 
 body header nav section {
     display: flex;
     justify-content: space-between;
 }
 
-body header nav img:first-of-type  {
-    width: 10%;
-    height: 10%;
+body header nav a img:first-of-type  {
+    width: 2.3em;
+    height: 2.3em;
     margin: 1em;
 }
 
 
 body header img:nth-child(2) {
-    width: 8%;
-    height: 8%;
+    width: 9%;
+    height: 9%;
     margin-top: 1.2em;
-    margin-right: 1em;
 }
 
 body header img:nth-child(3) {
@@ -34,14 +66,17 @@ body header img:nth-child(3) {
     margin: 1em;
 }
 
+
 body header nav {
     border-bottom: 1px black solid;
     position: fixed;
-    background-color: white;
+    background-color: var(--achtergrondKleur);
     width: 100vw;
 }
 
-
+/*********************/
+/***   HAMBURGER   ***/
+/*********************/
 
 header section ul li {
     font-family: 'koptekst';
@@ -77,14 +112,17 @@ header > section:nth-of-type(1){
 
 
 /*********************/
-/*       main        */
+/*       MAIN        */
 /*********************/
 
-@font-face {
-    font-family: 'koptekst' ;
-    src: url(../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf);
-}
 
+
+
+
+
+/*********************/
+/***   SLIDER 1    ***/
+/*********************/
 
 main section:first-of-type article:first-of-type {
     display: flex;
@@ -116,9 +154,14 @@ main section:first-of-type article:first-of-type {
     padding-top: 1em;
     padding-right: 1em;
     padding-bottom: 0.5em;
+    background-color: var(--achtergrondKleur);
 }
 
 
+
+/*********************/
+/***   EXHIBITION   ***/
+/*********************/
 
 main > article:nth-of-type(1) img:only-of-type {
     height: 3%;
@@ -130,19 +173,29 @@ main > article:nth-of-type(1) img:only-of-type {
 main > article:nth-of-type(1) {
     display: flex;
     flex-direction: row;
+    background-color: var(--achtergrondKleur);
+    color: var(--hoofdKleur);
 }
 
 main > article:nth-of-type(2) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--achtergrondKleur);
+    color: var(--hoofdKleur);
 }
 
 main > article:nth-of-type(1) p {
     font-family: Helvetica, sans-serif;
 }
 
-main article:nth-child(3) h1 {
+
+
+/*********************/
+/***    KOPJE 1    ***/
+/*********************/
+
+main article:nth-child(3) a h1 {
     font-family: 'koptekst';
     letter-spacing: -0.01em;
     display: flex;
@@ -150,6 +203,16 @@ main article:nth-child(3) h1 {
     padding: 0.5em;
     font-size: 32px;
 }
+
+main article:nth-child(3) a {
+    text-decoration: black underline 0.8px;
+}
+
+
+/*********************/
+/***    KOPJE 2    ***/
+/*********************/
+
 
 main article:nth-child(3) h2 {
     font-family: Helvetica, sans-serif;
@@ -161,8 +224,6 @@ main article:nth-child(3) h2 {
 
 
 
-
-
 main > article:nth-of-type(3) {
     display: flex;
     flex-direction: row;
@@ -171,8 +232,13 @@ main > article:nth-of-type(3) {
     border-top: 1px black solid;
     border-bottom: 1px black solid;
     padding: 1em;
+    background-color: var(--achtergrondKleur);
 }
 
+
+/*********************/
+/***     NEWS      ***/
+/*********************/
 main > article:nth-of-type(3) img {
     height: 3%;
     width: 3%;
@@ -180,10 +246,22 @@ main > article:nth-of-type(3) img {
     margin-right: 0.5em;
 }
 
-main > article:nth-of-type(3) p {
+main > article:nth-of-type(3) a h2 {
     font-family: Helvetica, sans-serif;
+    color: var(--hoofdKleur);
+    font-size: medium;
+    font-weight: 400;
 }
 
+main > article:nth-of-type(3) a {
+    text-decoration: none;
+}
+
+
+
+/*********************/
+/***    LIJST 1    ***/
+/*********************/
 
 main > article:nth-of-type(4) {
     display: flex;
@@ -191,18 +269,22 @@ main > article:nth-of-type(4) {
     justify-content: center;
     padding: 1em;
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
 
 main article:nth-of-type(4) h3 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
+    color: var(--hoofdKleur)
 }
 
 main > article:nth-of-type(4) p {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
+    color: var(--hoofdKleur);
+    text-decoration: underline 0.8px;
 }
 
 
@@ -212,18 +294,23 @@ main > article:nth-of-type(5) {
     justify-content: center;
     padding: 1em;
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
+    color: var(--hoofdKleur)
 }
 
 main article:nth-of-type(5) h3 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
+    color: var(--hoofdKleur)
 }
 
 main > article:nth-of-type(5) p {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
+    color: var(--hoofdKleur);
+    text-decoration: underline 0.8px;
 }
 
 
@@ -233,12 +320,14 @@ main > article:nth-of-type(6) {
     justify-content: center;
     padding: 1em;
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
 
 main article:nth-of-type(6) h3 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
+    color: var(--hoofdKleur)
 }
 
 main > article:nth-of-type(6) p {
@@ -246,6 +335,8 @@ main > article:nth-of-type(6) p {
     font-size: 20px;
     font-weight: lighter;
     margin-right: 1em;
+    color: var(--hoofdKleur);
+    text-decoration: underline 0.8px;
 }
 
 
@@ -255,18 +346,22 @@ main article:nth-of-type(7) {
     justify-content: center;
     padding: 1em;
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
 
 main article:nth-of-type(7) h3 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
+    color: var(--hoofdKleur);
 }
 
 main article:nth-of-type(7) p {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
+    color: var(--hoofdKleur);
+    text-decoration: underline 0.8px;
 }
 
 
@@ -276,46 +371,74 @@ main article:nth-of-type(8) {
     justify-content: center;
     padding: 1em;
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
 
 main article:nth-of-type(8) h3 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
+    color: var(--hoofdKleur)
 }
 
 main article:nth-of-type(8) p {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
+    color: var(--hoofdKleur);
+    text-decoration: underline 0.8px;
+}
+
+main article:nth-of-type(4) a , article:nth-of-type(5) a, article:nth-of-type(6) a, article:nth-of-type(7) a, article:nth-of-type(8) a {
+    text-decoration: none;
 }
 
 
-
-
+/**************************/
+/***  ALL NEWS BUTTON   ***/
+/**************************/
 
 
 main section:nth-of-type(2) {
     border-bottom: 1px black solid;
+    background-color: white;
     padding: 1em;
     display: flex;
     justify-content: center;
+    background-color: white;
+    background-color: var(--hoofdKleur);
 }
 
-main section:nth-of-type(2) button {
-    background-color: white;
+main section:nth-of-type(2)  button {
     padding: 1em 2.5em 1em 2.5em;
-    border: 1px solid black;
     font-weight: 900;
     font-size: large;
+    color: black;
+    border: 1px black solid ;
+    background-color: white;
+    transition: ease-in-out 0.2s;
 }
 
+main section:nth-of-type(2) button:hover {
+    box-shadow: 2px 2px 4px black;
+    scale: 1.2;
+}
+
+main section:nth-of-type(2) {
+    background-color: var(--achtergrondKleur);
+}
+
+
+/*********************/
+/***   BIOGRAPHY   ***/
+/*********************/
 
 main article:nth-of-type(9) {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1em;
+    padding-top: 1em;
+    background-color: var(--achtergrondKleur);
 }
 
 main article:nth-of-type(9) img {
@@ -326,14 +449,22 @@ main article:nth-of-type(9) img {
 
 main article:nth-of-type(9) p {
     font-family: 'koptekst';
+    color: var(--hoofdKleur);
 }
 
+
+
+/*************************/
+/***  ANATOLY ZVEREV   ***/
+/*************************/
 
 main article:nth-of-type(10) {
     display: flex;
     justify-content: center;
-    margin-top: 1em;
+    padding-top: 1em;
+    background-color: var(--achtergrondKleur);
 }
+
 
 main article:nth-of-type(10) img {
     aspect-ratio: 1 / 1; 
@@ -344,9 +475,11 @@ main article:nth-of-type(10) img {
 main article:nth-of-type(11) {
     display: flex;
     justify-content: center;
-    margin-top: 2em;
+    padding-top: 2em;
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
+
 
 main article:nth-of-type(11) h2 {
     font-family: 'koptekst';
@@ -354,11 +487,19 @@ main article:nth-of-type(11) h2 {
     margin-bottom: 2em;
 }
 
+
+
+/***************************/
+/***  ABOUT THE MUSEUM   ***/
+/***************************/
+
 main article:nth-of-type(12) {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--achtergrondKleur);
 }
+
 
 main article:nth-of-type(12) img {
     height: 3%;
@@ -370,9 +511,14 @@ main article:nth-of-type(12) img {
 
 main article:nth-of-type(12) p {
     font-family: 'koptekst';
-    margin-top: 1em;
+    padding-top: 1em;
+    color: var(--hoofdKleur);
 }
 
+
+/*********************/
+/***    MARQUEE   ****/
+/*********************/
 
 main section:nth-of-type(3) {
     border-bottom: 1px black solid;
@@ -381,13 +527,21 @@ main section:nth-of-type(3) {
 main section marquee {
     font-family: 'koptekst';
     font-size: 10em;
+    background-color: var(--achtergrondKleur);
 }
 
+
+
+
+/***********************/
+/***    MATERIAL 1   ***/
+/***********************/
 
 main article:nth-of-type(13) {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--achtergrondKleur);
 }
 
 
@@ -402,12 +556,19 @@ main article:nth-of-type(13) img {
 main article:nth-of-type(13) p {
     font-family: 'koptekst';
     margin-top: 1em;
+    color: var(--hoofdKleur);
 }
+
+
+/***********************/
+/***    SOVIET ART   ***/
+/***********************/
 
 main section:nth-of-type(4) {
     display: flex;
     justify-content: center;
-    margin-top: 1em;
+    padding-top: 1em;
+    background-color: var(--achtergrondKleur);
 }
 
 
@@ -419,6 +580,7 @@ main section:nth-of-type(4) img {
 
 main article:nth-of-type(14) {
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
 
 main article:nth-of-type(14)  {
@@ -426,7 +588,7 @@ main article:nth-of-type(14)  {
     justify-content: center;
     align-items: center;
     font-family: 'koptekst';
-    margin-top: 2em;
+    padding-top: 2em;
 }
 
 main article:nth-of-type(14) h2 {
@@ -436,11 +598,16 @@ main article:nth-of-type(14) h2 {
 }
 
 
+/***********************/
+/***    MATERIAL 2   ***/
+/***********************/
+
 main article:nth-of-type(15) {
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
 
 main article:nth-of-type(15) img {
@@ -456,8 +623,13 @@ main article:nth-of-type(15) p {
     font-family: 'koptekst';
     margin-top: 1em;
     margin-bottom: 1em;
+    color: var(--hoofdKleur);
 }
 
+
+/***********************/
+/***     LIJST 2     ***/
+/***********************/
 
 main article:nth-of-type(16) {
     display: flex;
@@ -465,6 +637,7 @@ main article:nth-of-type(16) {
     align-items: center;
     padding: 1em;
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
 
 main article:nth-of-type(16) h3 {
@@ -478,6 +651,8 @@ main article:nth-of-type(16) p {
     font-size: 20px;
     font-weight: lighter;
     margin-right: 1em;
+    color: var(--hoofdKleur);
+    text-decoration: underline 0.8px;
 }
 
 main article:nth-of-type(17) {
@@ -486,6 +661,7 @@ main article:nth-of-type(17) {
     align-items: center;
     padding: 1em;
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
 
 main article:nth-of-type(17) h3 {
@@ -499,6 +675,8 @@ main article:nth-of-type(17) p {
     font-size: 20px;
     font-weight: lighter;
     margin-right: 1em;
+    color: var(--hoofdKleur);
+    text-decoration: underline 0.8px;
 }
 
 
@@ -508,6 +686,7 @@ main article:nth-of-type(18) {
     align-items: center;
     padding: 1em;
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
 
 main article:nth-of-type(18) h3 {
@@ -521,6 +700,8 @@ main article:nth-of-type(18) p {
     font-weight: lighter;
     margin-right: 3em;
     margin-left: 1em;
+    color: var(--hoofdKleur);
+    text-decoration: underline 0.8px;
 }
 
 
@@ -530,6 +711,7 @@ main article:nth-of-type(19) {
     align-items: center;
     padding: 1em;
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
 
 main article:nth-of-type(19) h3 {
@@ -543,7 +725,17 @@ main article:nth-of-type(19) p {
     font-size: 20px;
     font-weight: lighter;
     margin-right: 1em;
+    color: var(--hoofdKleur);
+    text-decoration: underline 0.8px;
 }
+
+main article:nth-of-type(16) a, article:nth-of-type(17) a, article:nth-of-type(18) a, article:nth-of-type(19) a {
+    text-decoration: none;
+}
+
+/****************************************/
+/***    ALL ONLINE MATERIALS BUTTON   ***/
+/****************************************/
 
 main section:nth-of-type(5) button {
     background-color: white;
@@ -551,6 +743,15 @@ main section:nth-of-type(5) button {
     border: 1px solid black;
     font-weight: 900;
     font-size: large;
+    color: var(--hoofdKleur);
+    background-color: var(--achtergrondKleur);
+    transition: 0.5s ease-in-out;
+}
+
+main section:nth-of-type(5) button:hover {
+    transition: 0.5s ease-in-out;
+    scale: 1.2;
+    transform: rotate(360deg);
 }
 
 
@@ -559,11 +760,18 @@ main section:nth-of-type(5) {
     padding: 1em;
     display: flex;
     justify-content: center;
+    background-color: var(--achtergrondKleur);
 }
+
+
+/**********************************/
+/***    UPDATES OF THE MUSEUM   ***/
+/**********************************/
 
 main article:nth-of-type(20) {
     display: flex;
     justify-content: center;
+    background-color: var(--achtergrondKleur);
 }
 
 main article:nth-of-type(20) h3 {
@@ -575,10 +783,16 @@ main article:nth-of-type(20) h3 {
     margin-bottom: 1em;
 }
 
+
+/******************************/
+/***    EMAIL BUTTON/FORM   ***/
+/******************************/
+
 main section:nth-of-type(6) {
     display: flex;
     justify-content: center;
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
 
 
@@ -590,29 +804,40 @@ main section:nth-of-type(6) form input {
     background-color: white;
     padding: 12px 20px 12px 40px;
     transition: width 0.4s ease-in-out;
+    
 }
 
 main section:nth-of-type(6) button {
     border: 1px solid black;
-    background-color: black;
+    background-color: var(--hoofdKleur);
     color: white;
     padding: 1em;
     margin-bottom: 2em;
     margin-top: 1.8em;
+    color: var(--achtergrondKleur);
 }
 
 main section:nth-of-type(6) form label {
     display: flex;
     justify-content: center;
+    color: var(--hoofdKleur);
 }
 
 main section:nth-of-type(6) form label {
     font-family: 'koptekst';
-    margin-right: 6em;
+    margin-right: 8em;
+    color: var(--hoofdKleur);
+    transform: translateY(1em);
 }
+
+
+/***********************/
+/***    AZ STORE     ***/
+/***********************/
 
 main section:nth-of-type(7) {
     border-bottom: 1px black solid;
+    background-color: var(--achtergrondKleur);
 }
 
 main section:nth-of-type(7) h3 {
@@ -620,19 +845,23 @@ main section:nth-of-type(7) h3 {
     justify-content: center;
     font-family: 'koptekst';
     font-size: xx-large;
-    margin-top: 0.5em;
+    padding-top: 0.5em;
     letter-spacing: -0.02em;
     margin-bottom: 0.5em;
 }
 
 
-
+/****************************/
+/***    STORE ARTIKELEN   ***/
+/****************************/
 
 main section:nth-of-type(8) {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     border-bottom: 1px black solid;
+    
+    background-color: var(--achtergrondKleur);
 }
 
 main section:nth-of-type(8) article:nth-of-type(1) {
@@ -641,16 +870,23 @@ main section:nth-of-type(8) article:nth-of-type(1) {
     width: 90%;
     padding: 2em;
     margin-bottom: 2em;
+  
 }
 
 main section:nth-of-type(8) article:nth-of-type(1) h4 {
     font-family: 'koptekst';
     margin-bottom: 1em;
+    color: var(--hoofdKleur);
 }
 
 
 main section:nth-of-type(8) article:nth-of-type(1) img {
     width: 55vw;
+}
+
+main section:nth-of-type(8) article:nth-of-type(1) p {
+    color: var(--hoofdKleur);
+    font-size: larger;
 }
 
 
@@ -660,17 +896,23 @@ main section:nth-of-type(8) article:nth-of-type(2) {
     width: 90%;
     padding: 2em;
     margin-bottom: 4em;
+    background-color: var(--achtergrondKleur);
 }
 
 main section:nth-of-type(8) article:nth-of-type(2) h4 {
     font-family: 'koptekst';
     margin-bottom: 1em;
+    color: var(--hoofdKleur);
 }
 
 main section:nth-of-type(8) article:nth-of-type(2) img {
     width: 55vw;
 }
 
+main section:nth-of-type(8) article:nth-of-type(2) p {
+    color: var(--hoofdKleur);
+    font-size: larger;
+}
 
 
 
@@ -681,15 +923,22 @@ main section:nth-of-type(8) article:nth-of-type(3) {
     width: 90%;
     padding: 2em;
     margin-bottom: 1em;
+    background-color: var(--achtergrondKleur);
 }
 
 main section:nth-of-type(8) article:nth-of-type(3) h4 {
     font-family: 'koptekst';
     margin-bottom: 1em;
+    color: var(--hoofdKleur);
 }
 
 main section:nth-of-type(8) article:nth-of-type(3) img {
     width: 55vw;
+}
+
+main section:nth-of-type(8) article:nth-of-type(3) p {
+    color: var(--hoofdKleur);
+    font-size: larger;
 }
 
 
@@ -700,15 +949,22 @@ main section:nth-of-type(8) article:nth-of-type(4) {
     width: 90%;
     padding: 2em;
     margin-bottom: 2em;
+    background-color: var(--achtergrondKleur);
 }
 
 main section:nth-of-type(8) article:nth-of-type(4) h4 {
     font-family: 'koptekst';
     margin-bottom: 1em;
+    color: var(--hoofdKleur);
 }
 
 main section:nth-of-type(8) article:nth-of-type(4) img {
     width: 55vw;
+}
+
+main section:nth-of-type(8) article:nth-of-type(4) p {
+    color: var(--hoofdKleur);
+    font-size: larger;
 }
 
 
@@ -720,15 +976,22 @@ main section:nth-of-type(8) article:nth-of-type(5) {
     width: 90%;
     padding: 2em;
     margin-bottom: 1em;
+    background-color: var(--achtergrondKleur);
 }
 
 main section:nth-of-type(8) article:nth-of-type(5) h4 {
     font-family: 'koptekst';
     margin-bottom: 1em;
+    color: var(--hoofdKleur);
 }
 
 main section:nth-of-type(8) article:nth-of-type(5) img {
     width: 55vw;
+}
+
+main section:nth-of-type(8) article:nth-of-type(5) p {
+    color: var(--hoofdKleur);
+    font-size: larger;
 }
 
 
@@ -739,17 +1002,23 @@ main section:nth-of-type(8) article:nth-of-type(6) {
     border-left: 1px black solid;
     width: 90%;
     padding: 2em;
+    background-color: var(--achtergrondKleur);
 }
 
 main section:nth-of-type(8) article:nth-of-type(6) h4 {
     font-family: 'koptekst';
     margin-bottom: 1em;
+    color: var(--hoofdKleur);
 }
 
 main section:nth-of-type(8) article:nth-of-type(6) img {
     width: 55vw;
 }
 
+main section:nth-of-type(8) article:nth-of-type(6) p {
+    color: var(--hoofdKleur);
+    font-size: larger;
+}
 
 
 
@@ -760,20 +1029,66 @@ main section:nth-of-type(8) article:nth-of-type(6) img {
 /*      FOOTER      */
 /********************/
 
-footer article {
-    margin-left: 1em;
-    margin-top: 1em;
+footer > article {
+    padding-left: 1em;
+    padding-top: 1em;
+    background-color: var(--achtergrondKleur);
 }
 
 
 footer article h4 {
     font-family: 'koptekst';
     font-size: x-large;
+    color: var(--hoofdKleur);
 }
 
 footer article p {
     font-family: Helvetica, sans-serif;
+    color: var(--hoofdKleur);
 }
+
+
+
+/******************************/
+/***    EMAIL BUTTON/FORM   ***/
+/******************************/
+
+footer > section:first-of-type {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px black solid;
+    padding-top: 1em;
+    background-color: var(--achtergrondKleur);
+}
+
+
+footer > section:first-of-type form input {
+    width: 130px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+}
+
+footer > section:first-of-type button {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    margin-bottom: 2em;
+    margin-top: 1.8em;
+}
+
+footer > section:first-of-type form label {
+    display: flex;
+    justify-content: center;
+    font-family: 'koptekst';
+    margin-right: 6em;
+}
+
+
 
 
 
@@ -786,18 +1101,20 @@ footer article p {
 
 @keyframes logo-animatie {
     0% {
-        scale: 1;
-    }
-
-    100% {
-        scale: 1.5;
-    }
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
 }
 
-header nav section img:first-of-type:hover {
+header nav section a img:first-of-type:hover {
     animation-name: logo-animatie;
     animation-duration: 1s;
-    animation-timing-function: cubic-bezier(.17,1.58,.83,-0.62);
+    animation-timing-function: cubic-bezier(.8,.09,.25,.84);
 }
 
 
@@ -812,13 +1129,387 @@ header nav section img:first-of-type:hover {
 }
 
 
-header nav section img:nth-of-type(2):hover {
+header nav section > img:hover {
     animation-name: hamburger-animatie;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
-header nav section img:nth-of-type(2):hover {
+header nav section > img:hover {
     animation-name: hamburger-animatie;
     animation-direction: alternate-reverse;
 }
+
+
+.detail_pagina header nav section img:nth-of-type(2):hover {
+    animation-name: hamburger-animatie;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.detail_pagina header nav section img:nth-last-of-type(2):hover {
+    animation-name: hamburger-animatie;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes titel-animatie {
+    0% {
+        color: black
+    }
+
+    50% {
+        color: #ff4500;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+main article:nth-child(3) a h1 {
+    animation: titel-animatie 4s linear infinite alternate;
+}
+
+main section:nth-of-type(2) button:active {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+main section:nth-of-type(6) input:focus {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+main section:nth-of-type(5) button:active { 
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+
+footer > section:first-of-type input:focus {
+    background-color: lightblue;
+}
+
+.detail_pagina main section:first-of-type button:active {
+    background-color: lightblue;
+}
+
+@keyframes ticket-animatie {
+    0% {
+        width:10em; 
+        border-radius:0; 
+        background-color:var(--star-color);
+  }
+
+    50% {
+        width:14em; 
+        border-radius:.5em; 
+        background-color:var(--start-color); 
+    }
+
+    100% {
+        width:10em; 
+        border-radius:0; 
+        background-color:var(--start-color);
+    }
+}
+
+
+.detail_pagina main section:first-of-type button:hover {
+    animation-name: ticket-animatie;
+    animation-iteration-count: infinite;
+    animation-duration:2s;
+}
+
+.detail_pagina main section:first-of-type button {
+    --start-color: #ff4500;
+    --end-color: black;
+}
+
+.detail_pagina main section:first-of-type button {
+    background-color:var(--start-color);
+}
+
+
+
+
+/**************************/
+/*     DETAIL PAGINA      */
+/**************************/
+
+
+
+/*********************/
+/*     HEADER        */
+/*********************/
+
+/*********************/
+/***     NAV       ***/
+/*********************/
+
+.detail_pagina header nav section {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.detail_pagina header nav a img:first-of-type   {
+    width: 2.3em;
+    height: 2.3em;
+    margin: 1em;
+}
+
+
+.detail_pagina header img:nth-child(2) {
+    width: 9%;
+    height: 9%;
+    margin-top: 1.2em;
+}
+
+.detail_pagina header img:nth-child(3) {
+    width: 8%;
+    height: 8%;
+    margin: 1em;
+}
+
+.detail_pagina header nav {
+    border-bottom: 1px black solid;
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+}
+
+/*********************/
+/***   HAMBURGER   ***/
+/*********************/
+
+.detail_pagina header section ul li {
+    font-family: 'koptekst';
+    font-size: xx-large;
+    font-weight: 900;
+    list-style: none;
+    letter-spacing: -0.02em;
+}
+
+.detail_pagina header section ul {
+    margin-left: -2.5em;
+    text-align: center;
+    margin-top: 3em;
+}
+
+.detail_pagina header > section:nth-of-type(1) {
+    background-color: white;
+    position: fixed;
+    top: 63px; 
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: 0.8s ease;
+    transform: translateY(100em);
+}
+
+.hamburgerUitgeklapt {
+    translate: 0em -100em;
+}
+
+
+
+/*********************/
+/*       MAIN        */
+/*********************/
+
+/*********************/
+/*     SECTION 1     */
+/*********************/
+
+.detail_pagina main > img:first-of-type {
+    width: 90%;
+    height: 90%;
+    margin-top: 6em;
+    margin-left: 1.1em;
+}
+
+.detail_pagina main section:first-of-type h2 {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    font-family: 'koptekst';
+    margin-top: 1em;
+}
+
+.detail_pagina main section:first-of-type h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+    letter-spacing: -0.04em;
+    font-family: 'koptekst';
+    margin-top: 0.5em;
+}
+
+.detail_pagina main section:first-of-type h3 {
+    display: flex;
+    justify-content: center;
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    margin-top: 1em;
+    font-size: 1.8em;
+    margin-left: 1em;
+}
+
+.detail_pagina main section:first-of-type p:first-of-type {
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    font-size: medium;
+}
+
+.detail_pagina main section:first-of-type p:nth-of-type(2) {
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5em;
+    font-size: larger;
+}
+
+.detail_pagina main section:first-of-type button {
+    background-color: white;
+    padding: 1em 2.5em 1em 2.5em;
+    border: 1px solid black;
+    font-weight: 900;
+    font-size: large;
+    margin-top: 1em;
+    transition: ease-in-out;
+    padding: 1em;
+}
+
+.detail_pagina main section:first-of-type div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.detail_pagina main section:first-of-type p:nth-of-type(3) {
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.detail_pagina main section:nth-of-type(2) a {
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 2em;
+}
+
+.detail_pagina main section:nth-of-type(2) a img {
+    width: 30%;
+    margin-bottom: 2em;
+}
+
+
+
+
+/*******************/
+/*     ARTICLE 2   */
+/*******************/
+
+.detail_pagina main article:first-of-type {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.detail_pagina main article:first-of-type h4 {
+    font-family: 'koptekst';
+    font-size: larger;
+}
+
+.detail_pagina main article:nth-of-type(2) {
+    border-bottom: 1px black solid;
+}
+
+.detail_pagina main article:nth-of-type(2) h5 {
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: larger;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 2em;
+}
+
+.detail_pagina main > article:nth-of-type(2) p {
+    font-family: Helvetica, sans-serif;
+    margin: 1.5em;
+    margin-bottom: 2em;
+    line-height: 2em;
+    font-size: medium;
+}
+
+.detail_pagina article:nth-of-type(2) p em {
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/********************/
+/*      FOOTER      */
+/********************/
+
+.detail_pagina footer > article {
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+
+.detail_pagina footer article h4 {
+    font-family: 'koptekst';
+    font-size: x-large;
+}
+
+.detail_pagina footer article p {
+    font-family: Helvetica, sans-serif;
+}
+
+
+
+/******************************/
+/***    EMAIL BUTTON/FORM   ***/
+/******************************/
+
+.detail_pagina footer > section:first-of-type {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px black solid;
+    margin-top: 1em;
+}
+
+
+.detail_pagina footer > section:first-of-type form input {
+    width: 130px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+}
+
+.detail_pagina footer > section:first-of-type button {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    margin-bottom: 2em;
+    margin-top: 1.8em;
+}
+
+.detail_pagina footer > section:first-of-type form label {
+    display: flex;
+    justify-content: center;
+    font-family: 'koptekst';
+    margin-right: 6em;
+}
+

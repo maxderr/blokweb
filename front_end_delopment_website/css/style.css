@@ -272,14 +272,14 @@ main > article:nth-of-type(4) {
     background-color: var(--achtergrondKleur);
 }
 
-main article:nth-of-type(4) h3 {
+main > article:nth-of-type(4) h4 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
     color: var(--hoofdKleur)
 }
 
-main > article:nth-of-type(4) p {
+main > article:nth-of-type(4) h5 {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
@@ -298,14 +298,14 @@ main > article:nth-of-type(5) {
     color: var(--hoofdKleur)
 }
 
-main article:nth-of-type(5) h3 {
+main > article:nth-of-type(5) h4 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
     color: var(--hoofdKleur)
 }
 
-main > article:nth-of-type(5) p {
+main > article:nth-of-type(5) h5 {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
@@ -323,14 +323,14 @@ main > article:nth-of-type(6) {
     background-color: var(--achtergrondKleur);
 }
 
-main article:nth-of-type(6) h3 {
+main > article:nth-of-type(6) h4 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
     color: var(--hoofdKleur)
 }
 
-main > article:nth-of-type(6) p {
+main > article:nth-of-type(6) h5 {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
@@ -340,7 +340,7 @@ main > article:nth-of-type(6) p {
 }
 
 
-main article:nth-of-type(7) {
+main > article:nth-of-type(7) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -349,14 +349,14 @@ main article:nth-of-type(7) {
     background-color: var(--achtergrondKleur);
 }
 
-main article:nth-of-type(7) h3 {
+main > article:nth-of-type(7) h4 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
     color: var(--hoofdKleur);
 }
 
-main article:nth-of-type(7) p {
+main > article:nth-of-type(7) h5 {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
@@ -365,7 +365,7 @@ main article:nth-of-type(7) p {
 }
 
 
-main article:nth-of-type(8) {
+main > article:nth-of-type(8) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -374,14 +374,14 @@ main article:nth-of-type(8) {
     background-color: var(--achtergrondKleur);
 }
 
-main article:nth-of-type(8) h3 {
+main > article:nth-of-type(8) h4 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
     color: var(--hoofdKleur)
 }
 
-main article:nth-of-type(8) p {
+main > article:nth-of-type(8) h5 {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
@@ -640,13 +640,13 @@ main article:nth-of-type(16) {
     background-color: var(--achtergrondKleur);
 }
 
-main article:nth-of-type(16) h3 {
+main article:nth-of-type(16) h4 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
 }
 
-main article:nth-of-type(16) p {
+main article:nth-of-type(16) h5 {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
@@ -664,13 +664,13 @@ main article:nth-of-type(17) {
     background-color: var(--achtergrondKleur);
 }
 
-main article:nth-of-type(17) h3 {
+main article:nth-of-type(17) h4 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
 }
 
-main article:nth-of-type(17) p {
+main article:nth-of-type(17) h5 {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
@@ -689,12 +689,12 @@ main article:nth-of-type(18) {
     background-color: var(--achtergrondKleur);
 }
 
-main article:nth-of-type(18) h3 {
+main article:nth-of-type(18) h4 {
     font-family: 'koptekst';
     font-size: 40px;
 }
 
-main article:nth-of-type(18) p {
+main article:nth-of-type(18) h5 {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
@@ -714,13 +714,13 @@ main article:nth-of-type(19) {
     background-color: var(--achtergrondKleur);
 }
 
-main article:nth-of-type(19) h3 {
+main article:nth-of-type(19) h4 {
     font-family: 'koptekst';
     margin-right: 0.5em;
     font-size: 40px;
 }
 
-main article:nth-of-type(19) p {
+main article:nth-of-type(19) h5 {
     font-family: 'koptekst';
     font-size: 20px;
     font-weight: lighter;
